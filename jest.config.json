@@ -1,0 +1,9 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testMatch": ["**/?(*.)spec.ts?(x)"],
+  "setupFiles": ["<rootDir>/src/setupTests.ts"],
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/src/styleMock.ts"
+  }
+}

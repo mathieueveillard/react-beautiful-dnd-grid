@@ -1,0 +1,60 @@
+{
+  "name": "react-beautiful-dnd-grid",
+  "version": "0.1.0-alpha",
+  "description": "Grid management for react-beautiful-dnd",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch --config jest.config.json",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
+    "build": "rm -rf lib && mkdir lib && tsc -p tsconfig.build.json",
+    "test:pack": "npm run build && npm pack",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathieueveillard/react-beautiful-dnd-grid.git"
+  },
+  "keywords": [
+    "react",
+    "dnd",
+    "grid",
+    "component"
+  ],
+  "author": "Mathieu Eveillard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mathieueveillard/react-beautiful-dnd-grid/issues"
+  },
+  "homepage": "https://github.com/mathieueveillard/react-beautiful-dnd-grid#readme",
+  "devDependencies": {
+    "@types/enzyme": "^3.1.15",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.18",
+    "@types/object-hash": "^1.2.0",
+    "@types/react": "^16.7.18",
+    "@types/react-beautiful-dnd": "^10.0.0",
+    "@types/uuid": "^3.4.4",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jest": "^24.7.1",
+    "jsdom": "^14.0.0",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.15.3",
+    "react-dom": "^16.8.6",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "object-hash": "^1.3.1",
+    "react": "^16.7.0",
+    "react-beautiful-dnd": "^10.0.3",
+    "uuid": "^3.3.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "prettier": {
+    "printWidth": 120
+  }
+}
