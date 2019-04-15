@@ -2,7 +2,6 @@ import React, { ReactElement } from "react";
 import { DragDropContext, Droppable, DroppableProvided, DroppableStateSnapshot, DropResult } from "react-beautiful-dnd";
 import { ListManagerItem } from "./ListManagerItem";
 import { Item } from "./Item";
-import "./DragAndDropWrapper.css";
 
 interface Location {
   id: string;
@@ -26,6 +25,12 @@ export interface Props {
   onDragEnd(result: DragAndDropResult): void;
 }
 
+const horizontalStyle: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "flex-start"
+};
+
 export const DragAndDropWrapper: React.StatelessComponent<Props> = ({
   onDragEnd,
   chunks,
@@ -37,7 +42,11 @@ export const DragAndDropWrapper: React.StatelessComponent<Props> = ({
       {chunks.map(({ id: droppableId, items }: Chunk) => (
         <Droppable key={droppableId} droppableId={droppableId} direction={direction}>
           {(provided: DroppableProvided, _: DroppableStateSnapshot) => (
-            <div ref={provided.innerRef} className={direction.toString()} {...provided.droppableProps}>
+            <div
+              ref={provided.innerRef}
+              style={direction === "horizontal" ? horizontalStyle : undefined}
+              {...provided.droppableProps}
+            >
               {items.map((item: Item, index: number) => (
                 <ListManagerItem key={item.id} item={item} index={index} render={render} />
               ))}

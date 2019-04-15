@@ -2,8 +2,9 @@
   "name": "react-beautiful-dnd-grid",
   "version": "0.1.0-alpha",
   "description": "Grid management for react-beautiful-dnd",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "tsc": "tsc -p tsconfig.json",
     "test": "jest --watch --config jest.config.json",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "build": "rm -rf lib && mkdir lib && tsc -p tsconfig.build.json",
