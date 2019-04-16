@@ -2,14 +2,11 @@ import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 import { ListManagerItem } from "./ListManagerItem";
 import { Draggable } from "react-beautiful-dnd";
-import { Item } from "./Item";
 
 describe("<ListManagerItem />", () => {
-  const item: Item = {
-    id: "id"
-  };
+  const item = "item";
   const index: number = 0;
-  const render = (_: Item) => <div />;
+  const render = () => <div />;
 
   it("should render without crashing", () => {
     shallow(<ListManagerItem item={item} index={index} render={render} />);

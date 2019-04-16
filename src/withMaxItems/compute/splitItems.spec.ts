@@ -1,12 +1,11 @@
 import { splitItems } from "./splitItems";
 import { Chunk } from "../withMaxItems";
-import { Item } from "../Item";
 
 describe("splitItems", () => {
   it("should split items according to maxItems (less items than maxItems)", () => {
     // GIVEN
     const maxItems: number = 4;
-    const items: Item[] = [{ id: "0" }, { id: "1" }, { id: "2" }];
+    const items = [{ id: "0" }, { id: "1" }, { id: "2" }];
     const createId: () => string = jest.fn().mockReturnValue("id");
 
     // WHEN
@@ -25,7 +24,7 @@ describe("splitItems", () => {
   it("should split items according to maxItems (as many items as maxItems)", () => {
     // GIVEN
     const maxItems: number = 4;
-    const items: Item[] = [{ id: "0" }, { id: "1" }, { id: "2" }, { id: "3" }];
+    const items = [{ id: "0" }, { id: "1" }, { id: "2" }, { id: "3" }];
     const createId: () => string = jest.fn().mockReturnValue("id");
 
     // WHEN
@@ -44,7 +43,7 @@ describe("splitItems", () => {
   it("should split items according to maxItems (more items than maxItems)", () => {
     // GIVEN
     const maxItems: number = 4;
-    const items: Item[] = [{ id: "0" }, { id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }];
+    const items = [{ id: "0" }, { id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }];
     const createId: () => string = jest
       .fn()
       .mockReturnValueOnce("id0")

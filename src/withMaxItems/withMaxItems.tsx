@@ -1,5 +1,4 @@
 import React from "react";
-import { Item } from "./Item";
 import { Omit } from "../util/omit";
 import { splitItems, computeOriginalIndex } from "./compute";
 
@@ -15,7 +14,7 @@ export interface DragAndDropResult {
 
 export interface Chunk {
   id: string;
-  items: Item[];
+  items: any[];
 }
 
 export interface Props {
@@ -24,18 +23,18 @@ export interface Props {
 }
 
 export interface WithMaxItemsProps {
-  items: Item[];
+  items: any[];
   maxItems?: number;
   onDragEnd(sourceIndex: number, destinationIndex: number): void;
 }
 
 interface WithMaxItemsState {
   maxItems: number;
-  items: Item[];
+  items: any[];
   chunks: Chunk[];
 }
 
-export const withMaxItems = <P extends Props>(
+export const withMaxItems = <T, P extends Props>(
   Component: React.ComponentType<P>,
   createId: () => string
 ): React.ComponentType<Omit<P, Props> & WithMaxItemsProps> => {

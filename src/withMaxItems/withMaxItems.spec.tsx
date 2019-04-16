@@ -1,12 +1,11 @@
 import React from "react";
 import { Props, withMaxItems, WithMaxItemsProps, DragAndDropResult } from "./withMaxItems";
 import { mount, ReactWrapper } from "enzyme";
-import { Item } from "./Item";
 
 describe("withMaxItems", () => {
   it("Should split items in chunks according to the maxItems props", () => {
     // GIVEN
-    const items: Item[] = [
+    const items = [
       {
         id: "id0"
       },

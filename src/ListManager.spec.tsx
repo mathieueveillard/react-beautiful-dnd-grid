@@ -2,24 +2,23 @@ import React from "react";
 import { shallow, mount, ReactWrapper } from "enzyme";
 import { ListManager } from "./ListManager";
 import { ListManagerItem } from "./DragAndDropWrapper/ListManagerItem";
-import { Item } from "./withMaxItems/Item";
 
 describe("<ListManager />", () => {
-  const item0: Item = {
+  const item0 = {
     id: "id0"
   };
-  const item1: Item = {
+  const item1 = {
     id: "id1"
   };
-  const item2: Item = {
+  const item2 = {
     id: "id2"
   };
-  const item3: Item = {
+  const item3 = {
     id: "id3"
   };
-  const items: Item[] = [item0, item1, item2];
+  const items = [item0, item1, item2];
 
-  const render = (_: Item) => <div className="render-props-class" />;
+  const render = () => <div className="render-props-class" />;
 
   const onDragEnd = jest.fn();
 
