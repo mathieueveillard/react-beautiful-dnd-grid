@@ -71,8 +71,7 @@ export const withMaxItems = <T, P extends Props>(
 
     public render = () => {
       const { items, maxItems, onDragEnd, ...rest } = this.props;
-      // @ts-ignore
-      return <Component chunks={this.state.chunks} onDragEnd={this.onDragEnd} {...rest} />;
+      return <Component chunks={this.state.chunks} onDragEnd={this.onDragEnd} {...(rest as unknown) as P} />;
     };
   };
 };
