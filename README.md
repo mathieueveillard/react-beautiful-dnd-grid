@@ -6,6 +6,12 @@
 npm i react-beautiful-dnd-grid --save-dev
 ```
 
+## Demo
+
+https://stackblitz.com/edit/react-beautiful-dnd-grid-demo
+
+![Demo gif](./doc/demo.gif)
+
 ## Usage
 
 ```javascript
