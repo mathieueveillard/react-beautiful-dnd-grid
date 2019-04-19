@@ -1,6 +1,6 @@
 import React from "react";
 import { Omit } from "../util/omit";
-import { splitItems, computeOriginalIndex } from "./compute";
+import { splitItems, computeOriginalIndex, computeOriginalIndexAfterDrop } from "./compute";
 
 interface Location {
   id: string;
@@ -60,8 +60,9 @@ export const withMaxItems = <T, P extends Props>(
         const sourceChunkIndex: number = this.findChunkIndex(sourceChunkId);
         const destinationChunkIndex: number = this.findChunkIndex(destinationChunkId);
         const sourceIndex: number = computeOriginalIndex(this.state.maxItems, sourceChunkIndex, indexInSourceChunk);
-        const destinationIndex: number = computeOriginalIndex(
+        const destinationIndex: number = computeOriginalIndexAfterDrop(
           this.state.maxItems,
+          sourceChunkIndex,
           destinationChunkIndex,
           indexInDestinationChunk
         );
