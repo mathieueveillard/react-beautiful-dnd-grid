@@ -9,6 +9,7 @@
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "build": "rm -rf lib && mkdir lib && tsc -p tsconfig.build.json",
     "test:pack": "npm run build && npm pack",
+    "test:demo": "npm run build && rm -rf demo/src/lib && cp -r lib demo/src/lib",
     "prepublishOnly": "npm run build"
   },
   "repository": {

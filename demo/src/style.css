@@ -1,0 +1,16 @@
+.App {
+  font-family: 'Arial';
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}

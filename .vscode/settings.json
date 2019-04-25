@@ -5,9 +5,9 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
-    "**/*.js": true,
-    "**/*.test.js": true,
-    "**/*.js.map": true
+    "src/**/*.js": true,
+    "src/**/*.test.js": true,
+    "src/**/*.js.map": true
   },
   "editor.formatOnSave": true
 }
