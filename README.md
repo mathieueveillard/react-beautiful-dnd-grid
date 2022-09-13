@@ -1,9 +1,11 @@
 # react-beautiful-dnd-grid
 
+🚨 Beware: this package is not production-ready. Feel free to file a PR. 🚨
+
 ## Installation
 
 ```
-npm i react-beautiful-dnd-grid --save-dev
+npm i -S react-beautiful-dnd-grid
 ```
 
 ## Demo
